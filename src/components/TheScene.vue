@@ -35,8 +35,9 @@ const allAssetsLoaded = ref(false);
         Model author: https://sketchfab.com/mvrc.art (Maxim Mavrichev)
         Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
       -->
-      <a-asset-item id="masterSwordRoom" src="assets/mastersword_room.glb"></a-asset-item>
-      <a-asset-item id="templeRoom" src="assets/temple_room.glb"></a-asset-item>
+      <a-asset-item id="templeRoom" src="assets/mainRoom.glb"></a-asset-item>
+      <a-asset-item id="masterSwordRoom" src="assets/swordRoom.glb"></a-asset-item>
+      <a-asset-item id="masterSword" src="assets/masterSword.glb"></a-asset-item>
       <a-asset-item id="deku" src="assets/deku_emerald.glb"></a-asset-item>
       <a-asset-item id="goron" src="assets/goron_ruby.glb"></a-asset-item>
       <a-asset-item id="zora" src="assets/zora_sapphire.glb"></a-asset-item>
