@@ -1,36 +1,32 @@
 <script setup>
-  import { ref } from 'vue';
+import { ref } from 'vue';
 
-  import TheCameraRig from './TheCameraRig.vue';
-  import TheMainRoom from './TheMainRoom.vue';
-  import TheLifeCubeRoom from './TheLifeCubeRoom.vue';
-  import ThePhysicRoom from './ThePhysicRoom.vue';
+import TheCameraRig from './TheCameraRig.vue';
+import TheMainRoom from './TheMainRoom.vue';
+import TheLifeCubeRoom from './TheLifeCubeRoom.vue';
+import ThePhysicRoom from './ThePhysicRoom.vue';
+import TheMasterSwordRoom from './TheMasterSwordRoom.vue';
 
-  defineProps({
-    scale: Number,
-    overlaySelector: String,
-  });
+defineProps({
+  scale: Number,
+  overlaySelector: String,
+});
 
-  const allAssetsLoaded = ref(false);
+const allAssetsLoaded = ref(false);
 </script>
 
 <template>
-  <a-scene
-    background="color: black;"
-    :webxr="`
+  <a-scene background="color: black;" :webxr="`
       requiredFeatures: local-floor;
       referenceSpaceType: local-floor;
       optionalFeatures: dom-overlay;
       overlayElement: ${overlaySelector};
-    `"
-    xr-mode-ui="XRMode: xr"
-    physx="
+    `" xr-mode-ui="XRMode: xr" physx="
       autoLoad: true;
       delay: 1000;
       useDefaultScene: false;
       wasmUrl: lib/physx.release.wasm;
-    "
-  >
+    ">
 
     <a-assets @loaded="allAssetsLoaded = true">
       <!--
@@ -39,7 +35,12 @@
         Model author: https://sketchfab.com/mvrc.art (Maxim Mavrichev)
         Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
       -->
-      <a-asset-item id="room" src="assets/vr_gallery.glb"></a-asset-item>
+      <a-asset-item id="masterSwordRoom" src="assets/mastersword_room.glb"></a-asset-item>
+      <a-asset-item id="templeRoom" src="assets/temple_room.glb"></a-asset-item>
+      <a-asset-item id="deku" src="assets/deku_emerald.glb"></a-asset-item>
+      <a-asset-item id="goron" src="assets/goron_ruby.glb"></a-asset-item>
+      <a-asset-item id="zora" src="assets/zora_sapphire.glb"></a-asset-item>
+
       <!--
         Title: 3D Gallery for VR projects
         Model source: https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1
@@ -57,6 +58,7 @@
       <TheMainRoom :scale="scale" />
       <TheLifeCubeRoom />
       <ThePhysicRoom />
+      <TheMasterSwordRoom />
     </template>
 
     <TheCameraRig />
