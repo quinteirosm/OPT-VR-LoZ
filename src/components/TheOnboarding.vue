@@ -82,7 +82,7 @@ function enterScene() {
           </dd>
 
           <dt>
-            <a href="https://skfb.ly/6UVMx" target="_blank">Temple Of Time model</a>
+            <a href="https://skfb.ly/6UVMx" target="_blank">Temple Of Time and Master Sword model</a>
           </dt>
           <dd>
             by <a href="https://sketchfab.com/PomumCultor" target="_blank">Jean-Sébastien Bass Galipeault</a>

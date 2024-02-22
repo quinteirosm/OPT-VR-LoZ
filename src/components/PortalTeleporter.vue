@@ -14,7 +14,7 @@
 
 <template>
   <a-entity
-    geometry="primitive: circle; radius: 1"
+    geometry="primitive: box; depth:0 radius: 1"
     clickable
     :teleport-camera-rig="`
       x: ${x};
@@ -27,7 +27,7 @@
     <a-text
       align="center"
       :value="label"
-      position="0 1.2 0"
+      position="0 0 0"
     ></a-text>
   </a-entity>
 </template>
