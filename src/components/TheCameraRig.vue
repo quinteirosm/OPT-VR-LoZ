@@ -4,6 +4,11 @@ import '../aframe/hide-in-vr.js';
 import '../aframe/simple-navmesh-constraint.js';
 import '../aframe/blink-controls.js';
 import '../aframe/physx-grab.js';
+
+// array stocking 5 notes
+const notesPlayed = [];
+
+
 </script>
 
 <template>

@@ -17,7 +17,7 @@ defineProps({
     <a-entity gltf-model="#deku" position="0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
     <a-entity gltf-model="#goron" position="0 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
     <a-entity gltf-model="#zora" position="-0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
-    <a-box color="grey" depth="0.2" height="2.8" width="1.8" position="0 1.76 9.691"></a-box>
+    <!-- <a-box color="grey" depth="0.2" height="2.8" width="1.8" position="0 1.76 9.691"></a-box> -->
   </a-entity>
   <ExitDoor />
 </template>
