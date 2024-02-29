@@ -33,13 +33,22 @@ const allAssetsLoaded = ref(false);
       <a-asset-item id="deku" src="assets/deku_emerald.glb"></a-asset-item>
       <a-asset-item id="goron" src="assets/goron_ruby.glb"></a-asset-item>
       <a-asset-item id="zora" src="assets/zora_sapphire.glb"></a-asset-item>
-      <a-asset-item id="sound-1" response-type="arraybuffer" src="assets/sound1.mp3" preload="auto"></a-asset-item>
+      <a-asset-item id="wwWand" src="assets/ww_wand.glb"></a-asset-item>
+      <a-asset-item id="A" response-type="arraybuffer" src="assets/OOT_Notes_Ocarina_A_short.wav"
+        preload="auto"></a-asset-item>
+      <a-asset-item id="B" response-type="arraybuffer" src="assets/OOT_Notes_Ocarina_B_short.wav"
+        preload="auto"></a-asset-item>
+      <a-asset-item id="D" response-type="arraybuffer" src="assets/OOT_Notes_Ocarina_D_short.wav"
+        preload="auto"></a-asset-item>
+      <a-asset-item id="D2" response-type="arraybuffer" src="assets/OOT_Notes_Ocarina_D2_short.wav"
+        preload="auto"></a-asset-item>
+      <a-asset-item id="F" response-type="arraybuffer" src="assets/OOT_Notes_Ocarina_F_short.wav"
+        preload="auto"></a-asset-item>
+
     </a-assets>
 
     <template v-if="allAssetsLoaded">
       <TheMainRoom :scale="scale" />
-      <TheLifeCubeRoom />
-      <ThePhysicRoom />
       <TheMasterSwordRoom />
     </template>
 

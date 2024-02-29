@@ -116,6 +116,16 @@ function enterScene() {
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
           </dd>
 
+          <dt>
+            <a href="https://sketchfab.com/3d-models/wind-waker-the-legend-of-zelda-ww-685c477c40bb4fa991ce701d443f4ed9"
+              target="_blank">
+              Wind Waker - Conductor's baton</a>
+          </dt>
+          <dd>
+            by <a href="https://sketchfab.com/lumhax" target="_blank">Lumhax</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
         </dl>
       </div>
     </div>
