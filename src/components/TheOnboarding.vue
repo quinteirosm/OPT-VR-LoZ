@@ -12,6 +12,7 @@ function enterScene() {
   if (AFRAME.utils.device.checkHeadsetConnected() && !AFRAME.utils.device.isMobile()) {
     document.querySelector('a-scene').enterVR();
   }
+  document.querySelector('a-scene').emit('enter-scene');
 }
 </script>
 

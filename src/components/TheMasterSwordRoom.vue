@@ -55,7 +55,7 @@ window.addEventListener('click', (evt) => {
     </a-entity>
     <ExitDoor />
 
-    <!-- Main room navigation mesh  -->
+    <!-- Main room navigation mesh 
     <a-entity geometry="primitive: plane; height: 12; width: 12" position="0 0 -25" rotation="-90 0 0" data-role="nav-mesh"
-        material="color: blue" visible="false"></a-entity>
+        material="color: blue" visible="false"></a-entity> -->
 </template>
