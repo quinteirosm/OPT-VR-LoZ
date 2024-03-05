@@ -59,6 +59,13 @@ const allAssetsLoaded = ref(false);
       <TheMasterSwordRoom />
       <a-entity id="templeOfTimeTrigger" listen-to="target:a-scene; event:enter-scene; emit:backgroundSound"
         sound="src: #templeOfTime; loop:true; on:backgroundSound; volume:0.5"></a-entity>
+
+      <a-entity id="noteD2" sound="src: #D2; on: start-D2"></a-entity>
+      <a-entity id="noteD" sound="src: #D; on: start-D"></a-entity>
+      <a-entity id="noteB" sound="src: #B; on: start-B"></a-entity>
+      <a-entity id="noteA" sound="src: #A; on: start-A"></a-entity>
+      <a-entity id="noteF" sound="src: #F; on: start-F"></a-entity>
+
       <a-entity id="dekuSongTrigger" sound="src: #dekuSong; on: start-dekuSound"></a-entity>
       <a-entity id="goronSongTrigger" sound="src: #goronSong; on: start-goronSound"></a-entity>
       <a-entity id="zoraSongTrigger" sound="src: #zoraSong; on: start-zoraSound"></a-entity>

@@ -19,10 +19,25 @@ function enterScene() {
 <template>
   <div id="onboarding" v-if="showOnboarding">
     <div>
-      <h1>A-Frame + Vite + Vue Boilerplate</h1>
+      <h1>Ocarina of Time, the Zelda VR experience</h1>
       <p v-if="!loaded">loading...</p>
       <button v-if="loaded" @click="enterScene()">Enter scene</button>
       <div class="licences">
+        <section>
+          <h4>Introduction</h4>
+          <p>
+            This is a VR experience based on "The Legend of Zelda: Ocarina of Time". It is a
+            tribute to the original game and its fans. It is not an official game and it is not
+            affiliated with Nintendo. It is a non-profit school project.
+          </p>
+          <p>
+            In this game, you'll have to play the 3 songs to unlock the 3 gems. Once done, something wonderful will
+            happen. :)
+          </p>
+          <p>
+            This game was made by <a href="https://github.com/quinteirosm">Miguel Quinteiros.</a>
+          </p>
+        </section>
         <section>
           <h4>Movement modes support</h4>
           <ul>
@@ -40,94 +55,142 @@ function enterScene() {
             </li>
           </ul>
         </section>
-        <dl>
-          <dt>
-            <i>Included</i>
-          </dt>
-          <dt>
-            <a href="https://github.com/c-frame/aframe-extras" target="_blank">aframe-extras controls and
-              animation-mixer</a>
-          </dt>
-          <dd>
-            <a href="https://github.com/c-frame/aframe-extras/blob/master/LICENSE" target="_blank">MIT License</a>
-          </dd>
+        <dt>
+        <dt>
+          <i>Included assets</i>
+        </dt>
+        <dt>
+          <a href="https://github.com/c-frame/aframe-extras" target="_blank">aframe-extras controls and
+            animation-mixer</a>
+        </dt>
+        <dd>
+          <a href="https://github.com/c-frame/aframe-extras/blob/master/LICENSE" target="_blank">MIT License</a>
+        </dd>
 
-          <dt>
-            <a href="https://github.com/c-frame/physx" target="_blank">aframe physx</a>
-          </dt>
-          <dd>
-            <a href="https://github.com/c-frame/aframe-extras/blob/master/LICENSE" target="_blank">MIT License</a>
-          </dd>
+        <dt>
+          <a href="https://github.com/c-frame/physx" target="_blank">aframe physx</a>
+        </dt>
+        <dd>
+          <a href="https://github.com/c-frame/aframe-extras/blob/master/LICENSE" target="_blank">MIT License</a>
+        </dd>
 
-          <dt>
-            <a href="https://github.com/jure/aframe-blink-controls/" target="_blank">aframe-blink-controls</a>
-          </dt>
-          <dd>
-            <a href="https://github.com/jure/aframe-blink-controls/blob/main/LICENSE" target="_blank">MIT License</a>
-          </dd>
+        <dt>
+          <a href="https://github.com/jure/aframe-blink-controls/" target="_blank">aframe-blink-controls</a>
+        </dt>
+        <dd>
+          <a href="https://github.com/jure/aframe-blink-controls/blob/main/LICENSE" target="_blank">MIT License</a>
+        </dd>
 
-          <dt>
-            <a href=" https://github.com/AdaRoseCannon/aframe-xr-boilerplate"
-              target="_blank">simple-navmesh-constraint</a>
-          </dt>
-          <dd>
-            By Ada Rose Cannon under MIT License
-          </dd>
+        <dt>
+          <a href=" https://github.com/AdaRoseCannon/aframe-xr-boilerplate"
+            target="_blank">simple-navmesh-constraint</a>
+        </dt>
+        <dd>
+          By Ada Rose Cannon under MIT License
+        </dd>
 
-          <dt>
-            <a href="https://skfb.ly/owIUD" target="_blank">Main temple model</a>
-          </dt>
-          <dd>
-            by <a href="https://sketchfab.com/HermesAlvarado" target="_blank">HermesAlvarado</a>
-            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
-          </dd>
+        <dt>
+          <a href="https://skfb.ly/owIUD" target="_blank">Main temple model</a>
+        </dt>
+        <dd>
+          by <a href="https://sketchfab.com/HermesAlvarado" target="_blank">HermesAlvarado</a>
+          under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+        </dd>
 
-          <dt>
-            <a href="https://skfb.ly/6UVMx" target="_blank">Temple Of Time and Master Sword model</a>
-          </dt>
-          <dd>
-            by <a href="https://sketchfab.com/PomumCultor" target="_blank">Jean-Sébastien Bass Galipeault</a>
-            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
-          </dd>
+        <dt>
+          <a href="https://skfb.ly/6UVMx" target="_blank">Temple Of Time and Master Sword model</a>
+        </dt>
+        <dd>
+          by <a href="https://sketchfab.com/PomumCultor" target="_blank">Jean-Sébastien Bass Galipeault</a>
+          under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+        </dd>
 
-          <dt>
-            <a href="https://sketchfab.com/3d-models/kokiris-emerald-bd37124c71754f3099b4b3ebb8e83170"
-              target="_blank">Kokiri's Emerald model</a>
-          </dt>
-          <dd>
-            by <a href="https://sketchfab.com/brwntwn" target="_blank">brwntwn</a>
-            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
-          </dd>
+        <dt>
+          <a href="https://sketchfab.com/3d-models/kokiris-emerald-bd37124c71754f3099b4b3ebb8e83170"
+            target="_blank">Kokiri's Emerald model</a>
+        </dt>
+        <dd>
+          by <a href="https://sketchfab.com/brwntwn" target="_blank">brwntwn</a>
+          under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+        </dd>
 
-          <dt>
-            <a href="https://sketchfab.com/3d-models/goron-ruby-60cf0566cc7f4ac185891bfa625d76ae" target="_blank">Goron's
-              Ruby model</a>
-          </dt>
-          <dd>
-            by <a href="https://sketchfab.com/brwntwn" target="_blank">brwntwn</a>
-            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
-          </dd>
+        <dt>
+          <a href="https://sketchfab.com/3d-models/goron-ruby-60cf0566cc7f4ac185891bfa625d76ae" target="_blank">Goron's
+            Ruby model</a>
+        </dt>
+        <dd>
+          by <a href="https://sketchfab.com/brwntwn" target="_blank">brwntwn</a>
+          under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+        </dd>
 
-          <dt>
-            <a href="https://sketchfab.com/3d-models/zora-sapphire-a98716a696ff4c4081c04ab39e90a5d2"
-              target="_blank">Zora's Sapphire model</a>
-          </dt>
-          <dd>
-            by <a href="https://sketchfab.com/brwntwn" target="_blank">brwntwn</a>
-            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
-          </dd>
+        <dt>
+          <a href="https://sketchfab.com/3d-models/zora-sapphire-a98716a696ff4c4081c04ab39e90a5d2"
+            target="_blank">Zora's Sapphire model</a>
+        </dt>
+        <dd>
+          by <a href="https://sketchfab.com/brwntwn" target="_blank">brwntwn</a>
+          under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+        </dd>
 
-          <dt>
-            <a href="https://sketchfab.com/3d-models/wind-waker-the-legend-of-zelda-ww-685c477c40bb4fa991ce701d443f4ed9"
-              target="_blank">
-              Wind Waker - Conductor's baton</a>
-          </dt>
-          <dd>
-            by <a href="https://sketchfab.com/lumhax" target="_blank">Lumhax</a>
-            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
-          </dd>
+        <dt>
+          <a href="https://sketchfab.com/3d-models/wind-waker-the-legend-of-zelda-ww-685c477c40bb4fa991ce701d443f4ed9"
+            target="_blank">
+            Wind Waker - Conductor's baton</a>
+        </dt>
+        <dd>
+          by <a href="https://sketchfab.com/lumhax" target="_blank">Lumhax</a>
+          under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+        </dd>
 
-        </dl>
+        <dt>
+          <i>Included songs</i>
+        </dt>
+
+        <dt>
+          <a target="_blank">
+            The Legend of Zelda: Ocarina of Time - Ocarina notes</a>
+        </dt>
+        <dd>
+          by <a target="_blank">Nintendo</a>
+          under <a target="_blank">All Right Reserved</a>
+        </dd>
+
+        <dt>
+          <a target="_blank">
+            The Legend of Zelda: Ocarina of Time - Minuet of Forest</a>
+        </dt>
+        <dd>
+          by <a target="_blank">Nintendo</a>
+          under <a target="_blank">All Right Reserved</a>
+        </dd>
+
+        <dt>
+          <a target="_blank">
+            The Legend of Zelda: Ocarina of Time - Bolero of Fire</a>
+        </dt>
+        <dd>
+          by <a target="_blank">Nintendo</a>
+          under <a target="_blank">All Right Reserved</a>
+        </dd>
+
+        <dt>
+          <a target="_blank">
+            The Legend of Zelda: Ocarina of Time - Serenade of Water</a>
+        </dt>
+        <dd>
+          by <a target="_blank">Nintendo</a>
+          under <a target="_blank">All Right Reserved</a>
+        </dd>
+
+        <dt>
+          <a target="_blank">
+            The Legend of Zelda: Ocarina of Time - Error sound</a>
+        </dt>
+        <dd>
+          by <a target="_blank">Nintendo</a>
+          under <a target="_blank">All Right Reserved</a>
+        </dd>
+        </dt>
       </div>
     </div>
   </div>
@@ -195,6 +258,6 @@ a {
 }
 </style>#onboarding li {
 #onboarding li {
-  font-size: 1rem;
-  text-align: left;
+font-size: 1rem;
+text-align: left;
 }

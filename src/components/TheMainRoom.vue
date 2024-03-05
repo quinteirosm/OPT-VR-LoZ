@@ -15,6 +15,7 @@ function grabTheThing(evt) {
   // if something already grabbed, switch it
   const el = evt.target;
   const grabbedEl = document.querySelector('[data-grabbed]');
+
   if (grabbedEl) {
     grabbedEl.removeAttribute('bind-position');
     grabbedEl.removeAttribute('bind-rotation');
@@ -33,6 +34,19 @@ function grabTheThing(evt) {
   setTimeout(() => {
     el.dataset.grabbed = true;
   }, 500);
+
+  // if grabbedEl is the wand, put the raycaster to 4
+  if (grabbedEl.attributes.id.value === 'wwWand') {
+    // set raycaster to 4
+    document.querySelector('#ray').setAttribute('raycaster', 'far: 4');
+    document.querySelector('#hand-right').setAttribute('raycaster', 'far: 4');
+  }
+
+  if (grabbedEl.attributes.id.value === 'masterSword') {
+    // set raycaster to 4
+    document.querySelector('#ray').setAttribute('raycaster', 'far: 2');
+    document.querySelector('#hand-right').setAttribute('raycaster', 'far: 2');
+  }
 }
 
 window.addEventListener('click', (evt) => {
@@ -44,6 +58,18 @@ window.addEventListener('click', (evt) => {
     delete grabbedEl.dataset.grabbed;
     return;
   }
+});
+
+document.querySelector('a-scene').addEventListener('dekuPlayed', () => {
+  document.getElementById('dekuGem').setAttribute(visible, true);
+});
+
+document.querySelector('a-scene').addEventListener('goronPlayed', () => {
+  document.getElementById('goronGem').setAttribute(visible, true);
+});
+
+document.querySelector('a-scene').addEventListener('zoraPlayed', () => {
+  document.getElementById('zoraGem').setAttribute(visible, true);
 });
 
 //when all songs are played, open the door by animating in on Y axis
@@ -63,12 +89,28 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
     <PortalTeleporter material="src: #room-physic-texture" depth="0.1" position="0 1.76 9.691" rotation="0 180 0"
       scale="1.75 2.7 0.1" :rot="0" :y="0" :z="-19" :cameraEffect="true" :cameraY="1.70" :cameraZ="-17.6"
       :cameraRot="0" />
+
     <a-entity clickable @click="evt => grabTheThing(evt)" gltf-model="#wwWand" scale="0.0025 0.0025 0.0025"
       position="0 1 1" rotation="0 0 180"></a-entity>
-    <a-entity gltf-model="#deku" position="0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
-    <a-entity gltf-model="#goron" position="0 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
-    <a-entity gltf-model="#zora" position="-0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
+    <a-entity id="dekuGem" gltf-model="#deku" position="0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"
+      visible="false"></a-entity>
+    <a-entity id="goronGem" gltf-model="#goron" position="0 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"
+      visible="false"></a-entity>
+    <a-entity id="zoraGem" gltf-model="#zora" position="-0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"
+      visible="false"></a-entity>
     <a-box id="mainDoor" color="grey" depth="0.2" height="2.8" width="1.8" position="0 1.76 9.691"></a-box>
+
+    <a-text value="Minuet of Forest ↖️⬆️⬅️➡️⬅️➡️ top left \n top right \n left \n right \n left \n right"
+      position="2.996 2 -1.507" rotation="0 -90 0" scale="0.5 0.5 0.5" color="white" align="center" width="1"
+      wrap-count="16" side="double"></a-text>
+    <a-text
+      value="Bolero of Fire ⬇️↖️⬇️↖️➡️⬇️➡️⬇️ down \n top left \n down \n top left \n right \n down \n right \n down"
+      position="2.996 2 1.551" rotation="0 -90 0" scale="0.5 0.5 0.5" color="white" align="center" width="1"
+      wrap-count="14" side="double"></a-text>
+
+    <a-text value="Serenade of Water ↖️⬇️➡️➡️⬅️ top left \n down \n right \n right \n left" position="-2.999 2 -1.501"
+      rotation="0 90 0" scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="17"
+      side="double"></a-text>
   </a-entity>
   <ExitDoor />
   <!-- Main room navigation mesh  -->
