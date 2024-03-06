@@ -15,7 +15,7 @@ const allAssetsLoaded = ref(false);
 </script>
 
 <template>
-  <a-scene stats background="color: black;" :webxr="`
+  <a-scene background="color: black;" :webxr="`
       requiredFeatures: local-floor;
       referenceSpaceType: local-floor;
       optionalFeatures: dom-overlay;

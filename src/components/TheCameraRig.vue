@@ -22,7 +22,7 @@ const compareArrays = (a, b) => {
 };
 
 function playedNote(note) {
-  if (document.querySelector('#wwWand').getAttribute('data-grabbed')) {
+  if (document.querySelector('#wwWand').getAttribute('data-grabbed') === 'true') {
     document.getElementById(`note${note}`).emit(`start-${note}`);
     notesPlayed.push(note)
 
@@ -43,6 +43,7 @@ function playedNote(note) {
       document.querySelector('a-scene').emit('dekuPlayed');
       console.log('Deku song played');
       songDekuPlayed = true;
+
       if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
         document.querySelector('a-scene').emit('allSongsPlayed');
         notesPlayed = [];
@@ -54,6 +55,7 @@ function playedNote(note) {
       document.querySelector('a-scene').emit('goronPlayed');
       console.log('Goron song played');
       songGoronPlayed = true;
+
       if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
         document.querySelector('a-scene').emit('allSongsPlayed');
         notesPlayed = [];
@@ -110,19 +112,19 @@ onMounted(() => {
         <a-entity id="dummy-hand-left" position="-0.3 -0.4 -0.5"></a-entity>
       </a-entity>
 
-      <a-box width="3" height="2" depth="3" clickable id="music-alt-collider" position="-1 1.5 -2.2" scale="0.5 0.3 0.7"
+      <a-box width="3" height="2" depth="3" clickable id="music-alt-collider" position="-1 1 -2.2" scale="0.5 0.3 0.7"
         rotation="180 0 0" visible="false" physx-body="type: kinematic; emitCollisionEvents: true">
       </a-box>
-      <a-box width="3" height="2" depth="3" clickable id="music-top-collider" position="1 1.5 -2.2" scale="0.5 0.3 0.7"
+      <a-box width="3" height="2" depth="3" clickable id="music-top-collider" position="1 1 -2.2" scale="0.5 0.3 0.7"
         rotation="180 0 0" visible="false" physx-body="type: kinematic; emitCollisionEvents: true">
       </a-box>
-      <a-box width="4" height="2" depth="3" clickable id="music-down-collider" position="0 -1.5 -2.2"
-        scale="0.5 0.3 0.7" rotation="180 0 0" visible="false" physx-body="type: kinematic; emitCollisionEvents: true">
+      <a-box width="4" height="2" depth="3" clickable id="music-down-collider" position="0 -1 -2.2" scale="0.5 0.3 0.7"
+        rotation="180 0 0" visible="false" physx-body="type: kinematic; emitCollisionEvents: true">
       </a-box>
-      <a-box width="3" height="2" depth="3" clickable id="music-left-collider" position="-2 0 -2.2" scale="0.5 0.3 0.7"
+      <a-box width="3" height="2" depth="3" clickable id="music-left-collider" position="-1 0 -2.2" scale="0.5 0.3 0.7"
         rotation="180 0 90" visible="false" physx-body="type: kinematic; emitCollisionEvents: true">
       </a-box>
-      <a-box width="3" height="2" depth="3" clickable id="music-right-collider" position="2 0 -2.2" scale="0.5 0.3 0.7"
+      <a-box width="3" height="2" depth="3" clickable id="music-right-collider" position="1 0 -2.2" scale="0.5 0.3 0.7"
         rotation="180 0 90" visible="false" physx-body="type: kinematic; emitCollisionEvents: true">
       </a-box>
     </a-entity>

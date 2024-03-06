@@ -36,13 +36,13 @@ function grabTheThing(evt) {
   }, 500);
 
   // if grabbedEl is the wand, put the raycaster to 4
-  if (grabbedEl.attributes.id.value === 'wwWand') {
+  if (evt.target.id === 'wwWand') {
     // set raycaster to 4
     document.querySelector('#ray').setAttribute('raycaster', 'far: 4');
     document.querySelector('#hand-right').setAttribute('raycaster', 'far: 4');
   }
 
-  if (grabbedEl.attributes.id.value === 'masterSword') {
+  if (evt.target.id === 'masterSword') {
     // set raycaster to 4
     document.querySelector('#ray').setAttribute('raycaster', 'far: 2');
     document.querySelector('#hand-right').setAttribute('raycaster', 'far: 2');
@@ -61,15 +61,15 @@ window.addEventListener('click', (evt) => {
 });
 
 document.querySelector('a-scene').addEventListener('dekuPlayed', () => {
-  document.getElementById('dekuGem').setAttribute(visible, true);
+  document.querySelector('#dekuGem').setAttribute("visible", "true");
 });
 
 document.querySelector('a-scene').addEventListener('goronPlayed', () => {
-  document.getElementById('goronGem').setAttribute(visible, true);
+  document.querySelector('#goronGem').setAttribute("visible", "true");
 });
 
 document.querySelector('a-scene').addEventListener('zoraPlayed', () => {
-  document.getElementById('zoraGem').setAttribute(visible, true);
+  document.querySelector('#zoraGem').setAttribute("visible", "true");
 });
 
 //when all songs are played, open the door by animating in on Y axis
