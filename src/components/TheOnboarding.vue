@@ -43,7 +43,14 @@ function enterScene() {
           <ul>
             <li>
               Desktop – Keyboard for move (WASD or Arrows keys) + Mouse for look
-              control (Drag and drop)
+              control (Drag and drop). To play music notes, use the keys:
+              <ul>
+                <li>Top Left -> U</li>
+                <li>Top Right -> I</li>
+                <li>Bottom Left -> J</li>
+                <li>Down -> K</li>
+                <li>Bottom Right -> L</li>
+              </ul>
             </li>
             <li>
               Mobile – 1x Finger touch to go forward + 2x Fingers touch to go

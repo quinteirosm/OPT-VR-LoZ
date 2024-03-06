@@ -19,6 +19,7 @@ function grabTheThing(evt) {
   if (grabbedEl) {
     grabbedEl.removeAttribute('bind-position');
     grabbedEl.removeAttribute('bind-rotation');
+    document.getElementById('hand-right').setAttribute('raycaster', 'far: 1.5; objects: [clickable]; showLine: true; interval: 1000');
     copyPosition(document.querySelector('#camera-rig'), grabbedEl);
     delete grabbedEl.dataset.grabbed;
     return;
@@ -31,21 +32,14 @@ function grabTheThing(evt) {
     el.setAttribute('bind-position', 'target: #dummy-hand-right');
     el.setAttribute('bind-rotation', 'target: #dummy-hand-right; convertToLocal: true');
   }
+
   setTimeout(() => {
     el.dataset.grabbed = true;
-  }, 500);
+  }, 1000);
 
-  // if grabbedEl is the wand, put the raycaster to 4
-  if (evt.target.id === 'wwWand') {
-    // set raycaster to 4
-    document.querySelector('#ray').setAttribute('raycaster', 'far: 4');
-    document.querySelector('#hand-right').setAttribute('raycaster', 'far: 4');
-  }
-
-  if (evt.target.id === 'masterSword') {
-    // set raycaster to 4
-    document.querySelector('#ray').setAttribute('raycaster', 'far: 2');
-    document.querySelector('#hand-right').setAttribute('raycaster', 'far: 2');
+  if (el.id === 'wwWand' || el.id === 'masterSword') {
+    document.getElementById('wandText').setAttribute('visible', 'false');
+    document.getElementById('hand-right').setAttribute('raycaster', 'far: 4; objects: [clickable]; showLine: true; interval: 1000');
   }
 }
 
@@ -90,8 +84,14 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
       scale="1.75 2.7 0.1" :rot="0" :y="0" :z="-19" :cameraEffect="true" :cameraY="1.70" :cameraZ="-17.6"
       :cameraRot="0" />
 
-    <a-entity clickable @click="evt => grabTheThing(evt)" gltf-model="#wwWand" scale="0.0025 0.0025 0.0025"
-      position="0 1 1" rotation="0 0 180"></a-entity>
+    <a-text id="wandText" value="It's dangerous to go alone! Take this." position="0 2 -4" rotation="0 180 0"
+      scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="16" side="double" visible="true">
+    </a-text>
+
+    <a-entity id="wwWand" clickable @click="evt => grabTheThing(evt)" gltf-model="#wwWand" scale="0.0025 0.0025 0.0025"
+      position="0 1 -4" rotation="0 0 0">
+    </a-entity>
+
     <a-entity id="dekuGem" gltf-model="#deku" position="0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"
       visible="false"></a-entity>
     <a-entity id="goronGem" gltf-model="#goron" position="0 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"
@@ -100,17 +100,54 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
       visible="false"></a-entity>
     <a-box id="mainDoor" color="grey" depth="0.2" height="2.8" width="1.8" position="0 1.76 9.691"></a-box>
 
-    <a-text value="Minuet of Forest ↖️⬆️⬅️➡️⬅️➡️ top left \n top right \n left \n right \n left \n right"
-      position="2.996 2 -1.507" rotation="0 -90 0" scale="0.5 0.5 0.5" color="white" align="center" width="1"
-      wrap-count="16" side="double"></a-text>
-    <a-text
-      value="Bolero of Fire ⬇️↖️⬇️↖️➡️⬇️➡️⬇️ down \n top left \n down \n top left \n right \n down \n right \n down"
-      position="2.996 2 1.551" rotation="0 -90 0" scale="0.5 0.5 0.5" color="white" align="center" width="1"
-      wrap-count="14" side="double"></a-text>
+    <a-text value="Minuet of Forest ↖️⬆️⬅️➡️⬅️➡️" position="2.996 2 -1.507" rotation="0 -90 0" scale="0.5 0.5 0.5"
+      color="white" align="center" width="1" wrap-count="16" side="double">
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
+        position="-0.25 -0.25 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 1 0"
+        position="0 -0.25 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 0 0"
+        position="0.25 -0.25 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
+        position="-0.25 -0.5 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 0 0"
+        position="0 -0.5 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
+        position="0.25 -0.5 0"></a-entity>
+    </a-text>
+    <a-text value="Bolero of Fire ⬇️↖️⬇️↖️➡️⬇️➡️⬇️" position="2.996 2 1.551" rotation="0 -90 0" scale="0.5 0.5 0.5"
+      color="white" align="center" width="1" wrap-count="14" side="double">
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"
+        position="-0.25 -0.25 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
+        position="0 -0.25 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"
+        position="0.25 -0.25 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
+        position="-0.25 -0.5 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
+        position="0 -0.5 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"
+        position="0.2 -0.5 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
+        position="-0.1 -0.75 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"
+        position="0.1 -0.75 0"></a-entity>
+    </a-text>
 
-    <a-text value="Serenade of Water ↖️⬇️➡️➡️⬅️ top left \n down \n right \n right \n left" position="-2.999 2 -1.501"
-      rotation="0 90 0" scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="17"
-      side="double"></a-text>
+    <a-text value="Serenade of Water ↖️⬇️➡️➡️⬅️" position="-2.999 2 -1.501" rotation="0 90 0" scale="0.5 0.5 0.5"
+      color="white" align="center" width="1" wrap-count="17" side="double">
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
+        position="-0.25 -0.25 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"
+        position="0 -0.25 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
+        position="0.25 -0.25 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
+        position="-0.25 -0.5 0"></a-entity>
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 0 0"
+        position="0 -0.5 0"></a-entity>
+    </a-text>
   </a-entity>
   <ExitDoor />
   <!-- Main room navigation mesh  -->

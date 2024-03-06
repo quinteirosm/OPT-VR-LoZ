@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aframe-arrow-component": "^1.0.0",
     "vue": "^3.4.5"
   },
   "devDependencies": {

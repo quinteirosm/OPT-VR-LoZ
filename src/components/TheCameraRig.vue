@@ -22,56 +22,85 @@ const compareArrays = (a, b) => {
 };
 
 function playedNote(note) {
-  if (document.querySelector('#wwWand').getAttribute('data-grabbed') === 'true') {
-    document.getElementById(`note${note}`).emit(`start-${note}`);
-    notesPlayed.push(note)
+  // only works if wwWand is grabbed
+  if (document.getElementById('wwWand').dataset.grabbed === false) {
+    return;
+  }
 
-    if (notesPlayed.length == 5 && compareArrays(notesPlayed, songZora)) {
-      document.getElementById('zoraSongTrigger').emit('start-zoraSound');
-      document.querySelector('a-scene').emit('zoraPlayed');
-      console.log('Zora song played');
-      songZoraPlayed = true;
+  document.getElementById(`note${note}`).emit(`start-${note}`);
+  notesPlayed.push(note)
 
-      if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
-        document.querySelector('a-scene').emit('allSongsPlayed');
-        notesPlayed = [];
-      }
-    }
+  if (notesPlayed.length == 5 && compareArrays(notesPlayed, songZora)) {
+    document.getElementById('zoraSongTrigger').emit('start-zoraSound');
+    document.querySelector('a-scene').emit('zoraPlayed');
+    console.log('Zora song played');
+    songZoraPlayed = true;
 
-    if (notesPlayed.length == 6 && compareArrays(notesPlayed, songDeku)) {
-      document.getElementById('dekuSongTrigger').emit('start-dekuSound');
-      document.querySelector('a-scene').emit('dekuPlayed');
-      console.log('Deku song played');
-      songDekuPlayed = true;
-
-      if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
-        document.querySelector('a-scene').emit('allSongsPlayed');
-        notesPlayed = [];
-      }
-    }
-
-    if (notesPlayed.length == 8 && compareArrays(notesPlayed, songGoron)) {
-      document.getElementById('goronSongTrigger').emit('start-goronSound');
-      document.querySelector('a-scene').emit('goronPlayed');
-      console.log('Goron song played');
-      songGoronPlayed = true;
-
-      if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
-        document.querySelector('a-scene').emit('allSongsPlayed');
-        notesPlayed = [];
-      }
-    }
-
-    if (notesPlayed.length > 8) {
-      document.getElementById('errorTrigger').emit('start-errorSound');
-      console.log('wrong song');
+    if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
+      document.querySelector('a-scene').emit('allSongsPlayed');
       notesPlayed = [];
     }
+  }
+
+  if (notesPlayed.length == 6 && compareArrays(notesPlayed, songDeku)) {
+    document.getElementById('dekuSongTrigger').emit('start-dekuSound');
+    document.querySelector('a-scene').emit('dekuPlayed');
+    console.log('Deku song played');
+    songDekuPlayed = true;
+
+    if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
+      document.querySelector('a-scene').emit('allSongsPlayed');
+      notesPlayed = [];
+    }
+  }
+
+  if (notesPlayed.length == 8 && compareArrays(notesPlayed, songGoron)) {
+    document.getElementById('goronSongTrigger').emit('start-goronSound');
+    document.querySelector('a-scene').emit('goronPlayed');
+    console.log('Goron song played');
+    songGoronPlayed = true;
+
+    if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
+      document.querySelector('a-scene').emit('allSongsPlayed');
+      notesPlayed = [];
+    }
+  }
+
+  if (notesPlayed.length > 8) {
+    document.getElementById('errorTrigger').emit('start-errorSound');
+    console.log('wrong song');
+    notesPlayed = [];
   }
 }
 
 // songs
 onMounted(() => {
+  // For Desktop
+
+  document.addEventListener("keypress", function (event) {
+    if (event.key === "i") {
+      playedNote('D2');
+      console.log(notesPlayed);
+    }
+    if (event.key === "l") {
+      playedNote('A');
+      console.log(notesPlayed);
+    }
+    if (event.key === "k") {
+      playedNote('F');
+      console.log(notesPlayed);
+    }
+    if (event.key === "j") {
+      playedNote('B');
+      console.log(notesPlayed);
+    }
+    if (event.key === "u") {
+      playedNote('D');
+      console.log(notesPlayed);
+    }
+  });
+
+  // For VR
   document.querySelector('#music-top-collider').addEventListener('mouseenter', () => {
     playedNote('D2');
     console.log(notesPlayed);
