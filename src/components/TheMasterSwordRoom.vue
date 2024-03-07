@@ -32,7 +32,12 @@ function grabTheThing(evt) {
     setTimeout(() => {
         el.dataset.grabbed = true;
     }, 500);
+
+    if (el.id === 'masterSwordObject') {
+        el.components.sound.playSound();
+    }
 }
+
 
 window.addEventListener('click', (evt) => {
     const grabbedEl = document.querySelector('[data-grabbed]');
@@ -43,15 +48,19 @@ window.addEventListener('click', (evt) => {
         delete grabbedEl.dataset.grabbed;
         return;
     }
-});
+}
+);
+
 </script>
 
 <template>
     <a-entity gltf-model="#masterSwordRoom" rotation="0 0 0" position="0 0 -25" scale="0.1 0.1 0.1">
-        <PortalTeleporter material="src: #room-physic-texture" position="0 13 71.280" rotation="0 180 0" scale="29 27 0.1"
-            :rot="180" :y="0" :z="-16" :cameraEffect="true" :cameraY="1.80" :cameraZ="-17" :cameraRot="0" />
-        <a-entity clickable @click="evt => grabTheThing(evt)" gltf-model="#masterSword" position="0 16 0"
-            scale="0.2 0.2 0.2" rotation="0 0 180"></a-entity>
+        <PortalTeleporter material="src: #room-physic-texture" position="0 13 71.280" rotation="0 180 0"
+            scale="29 27 0.1" :rot="180" :y="0" :z="-16" :cameraEffect="true" :cameraY="1.80" :cameraZ="-17"
+            :cameraRot="0" />
+        <a-entity id="masterSwordObject" clickable @click="evt => grabTheThing(evt)" gltf-model="#masterSword"
+            position="0 16 0" scale="0.2 0.2 0.2" rotation="0 0 180"
+            sound="src: #item; loop:false; on:start-soundItem; volume:0.5"></a-entity>
     </a-entity>
     <ExitDoor />
 

@@ -11,23 +11,29 @@ defineProps({
   scale: Number,
 });
 
-function grabTheThing(evt) {
+function grabTheThing(evt, type) {
   // if something already grabbed, switch it
   const el = evt.target;
   const grabbedEl = document.querySelector('[data-grabbed]');
 
   if (grabbedEl) {
+    el.setAttribute('clickable');
     grabbedEl.removeAttribute('bind-position');
     grabbedEl.removeAttribute('bind-rotation');
-    document.getElementById('hand-right').setAttribute('raycaster', 'far: 1.5; objects: [clickable]; showLine: true; interval: 1000');
     copyPosition(document.querySelector('#camera-rig'), grabbedEl);
-    delete grabbedEl.dataset.grabbed;
+    grabbedEl.dataset.grabbed;
     return;
   }
 
   if (el.sceneEl.is('vr-mode')) {
     el.setAttribute('bind-position', 'target: #hand-right');
     el.setAttribute('bind-rotation', 'target: #hand-right; convertToLocal: true');
+    if (el.id === 'wwWand') {
+      el.setAttribute('bind-position', 'target: #hand-right');
+      el.setAttribute('bind-rotation', 'target: #hand-right; convertToLocal: true');
+      document.getElementById('hand-right').setAttribute('raycaster', 'far:5; showLine: false;');
+      el.removeAttribute('clickable');
+    }
   } else {
     el.setAttribute('bind-position', 'target: #dummy-hand-right');
     el.setAttribute('bind-rotation', 'target: #dummy-hand-right; convertToLocal: true');
@@ -35,11 +41,10 @@ function grabTheThing(evt) {
 
   setTimeout(() => {
     el.dataset.grabbed = true;
-  }, 1000);
+  }, 10);
 
-  if (el.id === 'wwWand' || el.id === 'masterSword') {
+  if (el.id === 'wwWand') {
     document.getElementById('wandText').setAttribute('visible', 'false');
-    document.getElementById('hand-right').setAttribute('raycaster', 'far: 4; objects: [clickable]; showLine: true; interval: 1000');
   }
 }
 
@@ -79,7 +84,7 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
 </script>
 
 <template>
-  <a-entity gltf-model="#templeRoom" rotation="0 -180 0" position="0 0 -7">
+  <a-entity id="mainRoom" gltf-model="#templeRoom" rotation="0 -180 0" position="0 0 -7">
     <PortalTeleporter material="src: #room-physic-texture" depth="0.1" position="0 1.76 9.691" rotation="0 180 0"
       scale="1.75 2.7 0.1" :rot="0" :y="0" :z="-19" :cameraEffect="true" :cameraY="1.70" :cameraZ="-17.6"
       :cameraRot="0" />
@@ -88,8 +93,10 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
       scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="16" side="double" visible="true">
     </a-text>
 
-    <a-entity id="wwWand" clickable @click="evt => grabTheThing(evt)" gltf-model="#wwWand" scale="0.0025 0.0025 0.0025"
-      position="0 1 -4" rotation="0 0 0">
+    <a-entity>
+      <a-entity id="wwWand" clickable @click="evt => grabTheThing(evt)" gltf-model="#wwWandItem"
+        scale="0.0025 0.0025 0.0025" position="0 1 -4" rotation="90 0 0">
+      </a-entity>
     </a-entity>
 
     <a-entity id="dekuGem" gltf-model="#deku" position="0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"
@@ -100,8 +107,8 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
       visible="false"></a-entity>
     <a-box id="mainDoor" color="grey" depth="0.2" height="2.8" width="1.8" position="0 1.76 9.691"></a-box>
 
-    <a-text value="Minuet of Forest ↖️⬆️⬅️➡️⬅️➡️" position="2.996 2 -1.507" rotation="0 -90 0" scale="0.5 0.5 0.5"
-      color="white" align="center" width="1" wrap-count="16" side="double">
+    <a-text id="dekuSongPart" value="Minuet of Forest ↖️⬆️⬅️➡️⬅️➡️" position="2.996 2 -1.507" rotation="0 -90 0"
+      scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="16" side="double">
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
         position="-0.25 -0.25 0"></a-entity>
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 1 0"
@@ -115,8 +122,8 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
         position="0.25 -0.5 0"></a-entity>
     </a-text>
-    <a-text value="Bolero of Fire ⬇️↖️⬇️↖️➡️⬇️➡️⬇️" position="2.996 2 1.551" rotation="0 -90 0" scale="0.5 0.5 0.5"
-      color="white" align="center" width="1" wrap-count="14" side="double">
+    <a-text id="goronSongPart" value="Bolero of Fire ⬇️↖️⬇️↖️➡️⬇️➡️⬇️" position="2.996 2 1.551" rotation="0 -90 0"
+      scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="14" side="double">
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"
         position="-0.25 -0.25 0"></a-entity>
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
@@ -135,8 +142,8 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
         position="0.1 -0.75 0"></a-entity>
     </a-text>
 
-    <a-text value="Serenade of Water ↖️⬇️➡️➡️⬅️" position="-2.999 2 -1.501" rotation="0 90 0" scale="0.5 0.5 0.5"
-      color="white" align="center" width="1" wrap-count="17" side="double">
+    <a-text id="zoraSongPart" value="Serenade of Water ↖️⬇️➡️➡️⬅️" position="-2.999 2 -1.501" rotation="0 90 0"
+      scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="17" side="double">
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
         position="-0.25 -0.25 0"></a-entity>
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"

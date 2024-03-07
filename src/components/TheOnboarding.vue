@@ -19,7 +19,7 @@ function enterScene() {
 <template>
   <div id="onboarding" v-if="showOnboarding">
     <div>
-      <h1>Ocarina of Time, the Zelda VR experience</h1>
+      <h1>The master sword trial</h1>
       <p v-if="!loaded">loading...</p>
       <button v-if="loaded" @click="enterScene()">Enter scene</button>
       <div class="licences">
@@ -50,6 +50,7 @@ function enterScene() {
                 <li>Bottom Left -> J</li>
                 <li>Down -> K</li>
                 <li>Bottom Right -> L</li>
+                <li>Reset song playing -> R</li>
               </ul>
             </li>
             <li>
