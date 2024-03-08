@@ -43,18 +43,18 @@
 - [**Kokiri's Emerald**](https://sketchfab.com/3d-models/kokiris-emerald-bd37124c71754f3099b4b3ebb8e83170) \
   by [brwntwn](https://sketchfab.com/brwntwn) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-- [**Goron's Ruby**](https://sketchfab.com/3d-models/goron-ruby-60cf0566cc7f4ac185891bfa625d76ae) \
+- [**Goron Ruby**](https://sketchfab.com/3d-models/goron-ruby-60cf0566cc7f4ac185891bfa625d76ae) \
   by [brwntwn](https://sketchfab.com/brwntwn) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 - [**Zora Sapphire**](https://sketchfab.com/3d-models/zora-sapphire-a98716a696ff4c4081c04ab39e90a5d2) \
   by [brwntwn](https://sketchfab.com/brwntwn) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 - [**Wind Waker | The Legend of Zelda: WW**](https://sketchfab.com/3d-models/wind-waker-the-legend-of-zelda-ww-685c477c40bb4fa991ce701d443f4ed9) \
-  by [lumhax](https://sketchfab.com/lumhax") is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+  by [lumhax](https://sketchfab.com/lumhax) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ### Audio
 
-- [**Temple of Time Theme**](https://www.youtube.com/watch?v=ov7nj5RArTs&ab_channel=VideoGamesMusic) \
+- [**Temple of Time**](https://www.youtube.com/watch?v=ov7nj5RArTs&ab_channel=VideoGamesMusic) \
   by [VideoGamesMusic](https://www.youtube.com/@VideoGamesMusic_VGM) from The Legend of Zelda: Ocarina of Time
 
 - [**Minuet of Forest**](https://www.youtube.com/watch?v=2Ko2-HaHLs0&ab_channel=VideoGamesMusic) \
@@ -80,8 +80,8 @@
 
 ### Image
 
-- [**Triforce**](https://icon-icons.com/icon/triforce/39449) \
-  by [Lorc, Delapouite & contributors](https://icon-icons.com/users/V0FlbpEtoH55fqnf9aoeQ/icon-sets/) is licensed under [CC BY 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Triforce Icon**](https://icon-icons.com/icon/triforce/39449) \
+  by [Lorc, Delapouite & contributors](https://icon-icons.com/users/V0FlbpEtoH55fqnf9aoeQ/icon-sets/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 

@@ -97,7 +97,7 @@ function enterScene() {
         </dd>
 
         <dt>
-          <a href="https://skfb.ly/owIUD" target="_blank">Main temple model</a>
+          <a href="https://skfb.ly/owIUD" target="_blank">Low-poly VR/Game Ready Interior Temple Scene</a>
         </dt>
         <dd>
           by <a href="https://sketchfab.com/HermesAlvarado" target="_blank">HermesAlvarado</a>
@@ -105,7 +105,7 @@ function enterScene() {
         </dd>
 
         <dt>
-          <a href="https://skfb.ly/6UVMx" target="_blank">Temple Of Time and Master Sword model</a>
+          <a href="https://skfb.ly/6UVMx" target="_blank">Temple of Time</a>
         </dt>
         <dd>
           by <a href="https://sketchfab.com/PomumCultor" target="_blank">Jean-Sébastien Bass Galipeault</a>
@@ -122,8 +122,8 @@ function enterScene() {
         </dd>
 
         <dt>
-          <a href="https://sketchfab.com/3d-models/goron-ruby-60cf0566cc7f4ac185891bfa625d76ae" target="_blank">Goron's
-            Ruby model</a>
+          <a href="https://sketchfab.com/3d-models/goron-ruby-60cf0566cc7f4ac185891bfa625d76ae" target="_blank">Goron
+            Ruby</a>
         </dt>
         <dd>
           by <a href="https://sketchfab.com/brwntwn" target="_blank">brwntwn</a>
@@ -131,8 +131,8 @@ function enterScene() {
         </dd>
 
         <dt>
-          <a href="https://sketchfab.com/3d-models/zora-sapphire-a98716a696ff4c4081c04ab39e90a5d2"
-            target="_blank">Zora's Sapphire model</a>
+          <a href="https://sketchfab.com/3d-models/zora-sapphire-a98716a696ff4c4081c04ab39e90a5d2" target="_blank">Zora
+            Sapphire</a>
         </dt>
         <dd>
           by <a href="https://sketchfab.com/brwntwn" target="_blank">brwntwn</a>
@@ -142,7 +142,7 @@ function enterScene() {
         <dt>
           <a href="https://sketchfab.com/3d-models/wind-waker-the-legend-of-zelda-ww-685c477c40bb4fa991ce701d443f4ed9"
             target="_blank">
-            Wind Waker - Conductor's baton</a>
+            Wind Waker | The Legend of Zelda: WW</a>
         </dt>
         <dd>
           by <a href="https://sketchfab.com/lumhax" target="_blank">Lumhax</a>
@@ -154,7 +154,7 @@ function enterScene() {
         </dt>
 
         <dt>
-          <a href="https://www.youtube.com/watch?v=ov7nj5RArTs&ab_channel=VideoGamesMusic">Temple of Time Theme</a>
+          <a href="https://www.youtube.com/watch?v=ov7nj5RArTs&ab_channel=VideoGamesMusic">Temple of Time</a>
         </dt>
         <dd>
           by <a href="https://www.youtube.com/@VideoGamesMusic_VGM">VideoGamesMusic</a>
@@ -211,7 +211,7 @@ function enterScene() {
 
         <dt>
           <a href="https://opengameart.org/content/stone-door">
-            Stone Door sound
+            Stone Door
           </a>
         </dt>
         <dd>
