@@ -45,11 +45,11 @@ function enterScene() {
               Desktop – Keyboard for move (WASD or Arrows keys) + Mouse for look
               control (Drag and drop). To play music notes, use the keys:
               <ul>
-                <li>Top Left -> U</li>
-                <li>Top Right -> I</li>
-                <li>Bottom Left -> J</li>
-                <li>Down -> K</li>
-                <li>Bottom Right -> L</li>
+                <li>Top Left -> H</li>
+                <li>Top Right -> J</li>
+                <li>Bottom Left -> B</li>
+                <li>Down -> N</li>
+                <li>Bottom Right -> M</li>
               </ul>
             </li>
             <li>

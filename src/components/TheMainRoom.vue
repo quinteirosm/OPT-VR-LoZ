@@ -20,6 +20,7 @@ function grabTheThing(evt, type) {
     el.setAttribute('clickable');
     grabbedEl.removeAttribute('bind-position');
     grabbedEl.removeAttribute('bind-rotation');
+    grabbelEd.setAttribute('rotation', '0 0 90')
     copyPosition(document.querySelector('#camera-rig'), grabbedEl);
     grabbedEl.dataset.grabbed;
     return;
@@ -53,6 +54,7 @@ window.addEventListener('click', (evt) => {
   if (grabbedEl) {
     grabbedEl.removeAttribute('bind-position');
     grabbedEl.removeAttribute('bind-rotation');
+    grabbedEl.setAttribute('rotation', '90 0 0')
     copyPosition(document.querySelector('#camera-rig'), grabbedEl);
     delete grabbedEl.dataset.grabbed;
     return;
@@ -85,14 +87,10 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
 
 <template>
   <a-entity id="mainRoom" gltf-model="#templeRoom" rotation="0 -180 0" position="0 0 -7">
-    <PortalTeleporter material="src: #room-physic-texture" depth="0.1" position="0 1.76 9.691" rotation="0 180 0"
-      scale="1.75 2.7 0.1" :rot="0" :y="0" :z="-19" :cameraEffect="true" :cameraY="1.70" :cameraZ="-17.6"
-      :cameraRot="0" />
 
     <a-text id="wandText" value="It's dangerous to go alone! Take this." position="0 2 -4" rotation="0 180 0"
       scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="16" side="double" visible="true">
     </a-text>
-
     <a-entity>
       <a-entity id="wwWand" clickable @click="evt => grabTheThing(evt)" gltf-model="#wwWandItem"
         scale="0.0025 0.0025 0.0025" position="0 1 -4" rotation="90 0 0">
@@ -105,13 +103,16 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
       visible="false"></a-entity>
     <a-entity id="zoraGem" gltf-model="#zora" position="-0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"
       visible="false"></a-entity>
-    <a-box id="mainDoor" color="grey" depth="0.2" height="2.8" width="1.8" position="0 1.76 9.691"></a-box>
+
+    <a-box id="mainDoor" color="grey" depth="0.2" height="3.5" width="1.8" position="0 1.980 9.742"></a-box>
+    <PortalTeleporter material="src: #room-physics-texture" depth="0.1" position="0 1.980 9.742" rotation="0 180 0"
+      scale="1.75 3.13 0.1" :rot="0" :y="0" :z="-19" :cameraEffect="true" :cameraY="1.70" :cameraZ="-19" />
 
     <a-text id="dekuSongPart" value="Minuet of Forest ↖️⬆️⬅️➡️⬅️➡️" position="2.996 2 -1.507" rotation="0 -90 0"
       scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="16" side="double">
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
         position="-0.25 -0.25 0"></a-entity>
-      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 1 0"
+      <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 1 0"
         position="0 -0.25 0"></a-entity>
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 0 0"
         position="0.25 -0.25 0"></a-entity>
