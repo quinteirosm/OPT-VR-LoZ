@@ -5,8 +5,15 @@ import '../aframe/simple-navmesh-constraint.js';
 import '../aframe/blink-controls.js';
 import '../aframe/physx-grab.js';
 import { onMounted } from 'vue';
+import { List, Item } from 'linked-list'
 
-let notesPlayed = [];
+let notesPlayed = new List()
+
+for (let i = 0; i < 8; i++) {
+  let item = new Item()
+  item.value = i
+  notesPlayed.append(item)
+}
 
 const songDeku = ['D', 'D2', 'B', 'A', 'B', 'A'];
 let songDekuPlayed = false;
@@ -17,9 +24,16 @@ let songGoronPlayed = false;
 const songZora = ['D', 'F', 'A', 'A', 'B'];
 let songZoraPlayed = false;
 
-const compareArrays = (a, b) => {
-  return JSON.stringify(a) === JSON.stringify(b);
-};
+function compareIfSequenceInList(sequence, list) {
+  let current = list.tail
+  for (let i = 0; i < sequence.length; i++) {
+    if (current.value !== sequence[sequence.length - 1 - i]) {
+      return false
+    }
+    current = current.prev
+  }
+  return true
+}
 
 function playedNote(note) {
   // only works if wwWand is has attribute data-grabbed
@@ -28,54 +42,36 @@ function playedNote(note) {
   }
 
   document.getElementById(`note${note}`).emit(`start-${note}`);
-  notesPlayed.push(note)
+  notesPlayed.head.detach()
+  let item = new Item()
+  item.value = note
+  notesPlayed.append(item)
+  console.log(notesPlayed);
 
-  if (notesPlayed.length == 5 && compareArrays(notesPlayed, songZora)) {
-    document.getElementById('correctTrigger').emit('start-correctSound');
-    document.getElementById('zoraSongTrigger').emit('start-zoraSound');
-    document.querySelector('a-scene').emit('zoraPlayed');
-    console.log('Zora song played');
-    songZoraPlayed = true;
-
-    if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
-      document.getElementById('correctTrigger').emit('start-correctSound');
-      document.querySelector('a-scene').emit('allSongsPlayed');
-      notesPlayed = [];
-    }
-  }
-
-  if (notesPlayed.length == 6 && compareArrays(notesPlayed, songDeku)) {
+  if (compareIfSequenceInList(songDeku, notesPlayed)) {
     document.getElementById('correctTrigger').emit('start-correctSound');
     document.getElementById('dekuSongTrigger').emit('start-dekuSound');
     document.querySelector('a-scene').emit('dekuPlayed');
-    console.log('Deku song played');
     songDekuPlayed = true;
-
-    if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
-      document.getElementById('correctTrigger').emit('start-correctSound');
-      document.querySelector('a-scene').emit('allSongsPlayed');
-      notesPlayed = [];
-    }
   }
 
-  if (notesPlayed.length == 8 && compareArrays(notesPlayed, songGoron)) {
+  if (compareIfSequenceInList(songGoron, notesPlayed)) {
     document.getElementById('correctTrigger').emit('start-correctSound');
     document.getElementById('goronSongTrigger').emit('start-goronSound');
     document.querySelector('a-scene').emit('goronPlayed');
-    console.log('Goron song played');
     songGoronPlayed = true;
-
-    if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
-      document.getElementById('correctTrigger').emit('start-correctSound');
-      document.querySelector('a-scene').emit('allSongsPlayed');
-      notesPlayed = [];
-    }
   }
 
-  if (notesPlayed.length > 8) {
-    document.getElementById('errorTrigger').emit('start-errorSound');
-    console.log('wrong song');
-    notesPlayed = [];
+  if (compareIfSequenceInList(songZora, notesPlayed)) {
+    document.getElementById('correctTrigger').emit('start-correctSound');
+    document.getElementById('zoraSongTrigger').emit('start-zoraSound');
+    document.querySelector('a-scene').emit('zoraPlayed');
+    songZoraPlayed = true;
+  }
+
+  if (songDekuPlayed && songGoronPlayed && songZoraPlayed) {
+    document.getElementById('correctTrigger').emit('start-correctSound');
+    document.querySelector('a-scene').emit('allSongsPlayed');
   }
 }
 
