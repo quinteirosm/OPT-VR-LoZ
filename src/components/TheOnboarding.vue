@@ -218,6 +218,20 @@ function enterScene() {
           by <a href="https://opengameart.org/users/bonebrah">bonebrah</a>
           under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC BY 1.0</a>
         </dd>
+
+        <dt>
+          <i>Images used</i>
+        </dt>
+
+        <dt>
+          <a href="https://icon-icons.com/icon/triforce/39449">
+            Triforce Icon
+          </a>
+        </dt>
+        <dd>
+          by <a href="https://icon-icons.com/users/V0FlbpEtoH55fqnf9aoeQ/icon-sets/">Lorc, Delapouite & contributors</a>
+          under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+        </dd>
         </dt>
       </div>
     </div>
