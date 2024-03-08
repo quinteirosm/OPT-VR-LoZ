@@ -46,7 +46,6 @@ function playedNote(note) {
   let item = new Item()
   item.value = note
   notesPlayed.append(item)
-  console.log(notesPlayed);
 
   if (compareIfSequenceInList(songDeku, notesPlayed)) {
     document.getElementById('correctTrigger').emit('start-correctSound');
@@ -98,11 +97,6 @@ onMounted(() => {
     }
     if (event.key === "u") {
       playedNote('D');
-      console.log(notesPlayed);
-    }
-    if (event.key === "r") {
-      document.getElementById('errorTrigger').emit('start-errorSound');
-      notesPlayed = [];
       console.log(notesPlayed);
     }
   });

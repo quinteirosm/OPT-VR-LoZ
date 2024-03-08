@@ -50,7 +50,6 @@ function enterScene() {
                 <li>Bottom Left -> J</li>
                 <li>Down -> K</li>
                 <li>Bottom Right -> L</li>
-                <li>Reset song playing -> R</li>
               </ul>
             </li>
             <li>
