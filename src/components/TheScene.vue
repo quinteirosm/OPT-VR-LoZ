@@ -28,6 +28,7 @@ const allAssetsLoaded = ref(false);
     ">
 
     <a-assets @loaded="allAssetsLoaded = true">
+      <!-- 3D Assets -->
       <a-asset-item id="templeRoom" src="assets/temple_room.glb"></a-asset-item>
       <a-asset-item id="masterSwordRoom" src="assets/swordRoom.glb"></a-asset-item>
       <a-asset-item id="masterSword" src="assets/masterSword.glb"></a-asset-item>
@@ -35,7 +36,7 @@ const allAssetsLoaded = ref(false);
       <a-asset-item id="goron" src="assets/goron_ruby.glb"></a-asset-item>
       <a-asset-item id="zora" src="assets/zora_sapphire.glb"></a-asset-item>
       <a-asset-item id="wwWandItem" src="assets/ww_wand.glb"></a-asset-item>
-
+      <!-- Audio assets -->
       <a-asset-item id="A" response-type="arraybuffer" src="assets/OOT_Notes_Ocarina_A_short.wav"
         preload="auto"></a-asset-item>
       <a-asset-item id="B" response-type="arraybuffer" src="assets/OOT_Notes_Ocarina_B_short.wav"
@@ -51,15 +52,18 @@ const allAssetsLoaded = ref(false);
       <a-asset-item id="dekuSong" response-type="arraybuffer" src="assets/dekuSong.mp3" preload="auto"></a-asset-item>
       <a-asset-item id="goronSong" response-type="arraybuffer" src="assets/goronSong.mp3" preload="auto"></a-asset-item>
       <a-asset-item id="zoraSong" response-type="arraybuffer" src="assets/zoraSong.mp3" preload="auto"></a-asset-item>
-      <a-asset-item id="error" response-type="arraybuffer" src="assets/OOT_Error.wav" preload="auto"></a-asset-item>
       <a-asset-item id="correct" response-type="arraybuffer" src="assets/OOT_Song_Correct.wav"
         preload="auto"></a-asset-item>
       <a-asset-item id="item" response-type="arraybuffer" src="assets/OOT_Fanfare_Item.wav"
         preload="auto"></a-asset-item>
+      <a-asset-item id="stoneDoorSound" response-type="arraybuffer" src="assets/stone_door.ogg"
+        preload="auto"></a-asset-item>
     </a-assets>
+
     <template v-if="allAssetsLoaded">
       <TheMainRoom :scale="scale" />
       <TheMasterSwordRoom />
+      <!-- Audio triggers -->
       <a-entity id="templeOfTimeTrigger" listen-to="target:a-scene; event:enter-scene; emit:backgroundSound"
         sound="src: #templeOfTime; loop:true; on:backgroundSound; volume:0.1"
         bind-position="target: #mainRoom"></a-entity>
@@ -76,7 +80,6 @@ const allAssetsLoaded = ref(false);
         bind-position="target: #goronSongPart"></a-entity>
       <a-entity id="zoraSongTrigger" sound="src: #zoraSong; on: start-zoraSound"
         bind-position="target: #zoraSongPart"></a-entity>
-      <a-entity id="errorTrigger" sound="src: #error; on: start-errorSound"></a-entity>
       <a-entity id="correctTrigger" sound="src: #correct; on: start-correctSound"></a-entity>
     </template>
     <TheCameraRig />

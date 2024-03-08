@@ -1,36 +1,68 @@
 <p align="center">
-    <img src="./logo.svg" alt="VAV Logo" align="center"/>
+    <img src="triforce.png" alt="TriforceLogo" align="center"/>
 </p>
-<h1 align="center">Vue + A-Frame + Vite boilerplate</h1>
-
-> A boilerplate for A-Frame 1.5, Vue 3.4 and Vite 5.0
+<h1 align="center">The master sword trial - VR</h1>
 
 ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
 ![A-Frame](https://img.shields.io/badge/A%E2%80%93Frame-1.5-brightgreen?style=for-the-badge&labelColor=%23ef2d5e&color=%23ef2d5e)
 ![Threejs](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-### [>> DEMO <<](https://onivers.com/aframe-vue-boilerplate/)
+### [>> DEMO <<](https://vr49.onivers.com/miguel/)
 
-## Included in the boilerplate
-
-### Libs and components
-
-- [aframe-extras controls and animation-mixer](https://github.com/c-frame/aframe-extras) (MIT License)
-- [aframe physx](https://github.com/c-frame/physx) (MIT License)
-- [aframe-blink-controls](https://github.com/jure/aframe-blink-controls) (MIT License)
-- [simple-navmesh-constraint](https://github.com/AdaRoseCannon/aframe-xr-boilerplate) (MIT Licence)
+## Included in the project
 
 ### Movement modes support
 
-- **Desktop** – Keyboard for move (_WASD_ or Arrows keys) + Mouse for look control (Drag and drop)
+- **Desktop** – Keyboard for move (_WASD_ or Arrows keys) + Mouse for look control (Drag and drop) + Keyboard for playing notes (_HJBNM_)
 - **Mobile** – 1x Finger touch to go forward + 2x Fingers touch to go backward + Gaze cursor for click
 - **VR Headset** – AR/VR walk + Teleport (Grip for grab and laser for click) + Gaze cursor for click
 
+### Libs and components
+
+- [**aframe-extras controls and animation-mixer**](https://github.com/c-frame/aframe-extras) \
+  by [c-frame](https://github.com/c-frame) is licensed under [MIT License](https://github.com/c-frame/aframe-extras/blob/master/LICENSE)
+
+- [**aframe physx**](https://github.com/c-frame/physx) \
+  by [c-frame](https://github.com/c-frame) is licensed under [MIT License](https://github.com/c-frame/aframe-extras/blob/master/LICENSE)
+
+- [**aframe-blink-controls**](https://github.com/jure/aframe-blink-controls/) \
+  by [jure](https://github.com/jure) is licensed under [MIT License](https://github.com/jure/aframe-blink-controls/blob/main/LICENSE)
+
+- [**simple-navmesh-constraint**](https://github.com/AdaRoseCannon/aframe-xr-boilerplate) \
+  by [AdaRoseCannon](https://github.com/AdaRoseCannon) is licensed under [MIT License](https://github.com/AdaRoseCannon/aframe-xr-boilerplate/blob/glitch/LICENSE)
+
 ### 3D models
 
-- **Main room** – [VR Gallery](https://sketchfab.com/3d-models/vr-gallery-1ac32ed62fdf424498acc146fad31f7e) by [Maxim Mavrichev](https://sketchfab.com/mvrc.art) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- **3D physic room** – [3d_gallery_for_vr_projects](https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1) by [tekuto1s](https://sketchfab.com/tekuto1s) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- [**Low-poly VR/Game Ready Interior Temple Scene**](https://skfb.ly/owIUD) \
+  by [HermesAlvarado](https://sketchfab.com/HermesAlvarado) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+- [**Temple Of Time**](https://skfb.ly/6UVMx) \
+  by [Jean-Sébastien Bass Galipeault](https://sketchfab.com/PomumCultor) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+- [**Kokiri's Emerald**](https://sketchfab.com/3d-models/kokiris-emerald-bd37124c71754f3099b4b3ebb8e83170) \
+  by [brwntwn](https://sketchfab.com/brwntwn) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+- [**Goron's Ruby**](https://sketchfab.com/3d-models/goron-ruby-60cf0566cc7f4ac185891bfa625d76ae) \
+  by [brwntwn](https://sketchfab.com/brwntwn) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+- [**Zora Sapphire**](https://sketchfab.com/3d-models/zora-sapphire-a98716a696ff4c4081c04ab39e90a5d2) \
+  by [brwntwn](https://sketchfab.com/brwntwn) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+- [**Wind Waker | The Legend of Zelda: WW**](https://sketchfab.com/3d-models/wind-waker-the-legend-of-zelda-ww-685c477c40bb4fa991ce701d443f4ed9) \
+  by [lumhax](https://sketchfab.com/lumhax") is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+  ### Audio
+
+- [**Countdown**](https://opengameart.org/content/countdown) \
+  by [qubodup](https://opengameart.org/users/qubodup) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) \
+  Modifications: Added the files together in the following order: countdown-a, countdown-a, countdown-b.
+
+### Image
+
+- [**Les frères Mario**](https://www.favicon.cc/?action=icon&file_id=137640) \
+  by [marcojetson](https://www.favicon.cc/?action=icon_list&user_id=36881) is licensed under [CC 0](https://creativecommons.org/publicdomain/zero/1.0/) \
+  Modifications: Added a VR headset to Mario's head and two controllers.
 
 ---
 
@@ -41,7 +73,7 @@
 ### Clone (or fork, or download)
 
 ```sh
-git clone https://github.com/Chabloz/a-frame-vite-vue-boilerplate.git .
+git clone https://github.com/PatrickMarques24/mario-kart-shooter-vr.git
 ```
 
 ### Install dependencies

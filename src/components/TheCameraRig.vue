@@ -80,23 +80,23 @@ onMounted(() => {
 
   document.addEventListener("keypress", function (event) {
     if (event.key === "h") {
-      playedNote('D2');
+      playedNote('D');
       console.log(notesPlayed);
     }
     if (event.key === "j") {
-      playedNote('A');
+      playedNote('D2');
       console.log(notesPlayed);
     }
     if (event.key === "b") {
-      playedNote('F');
-      console.log(notesPlayed);
-    }
-    if (event.key === "n") {
       playedNote('B');
       console.log(notesPlayed);
     }
+    if (event.key === "n") {
+      playedNote('F');
+      console.log(notesPlayed);
+    }
     if (event.key === "m") {
-      playedNote('D');
+      playedNote('A');
       console.log(notesPlayed);
     }
   });

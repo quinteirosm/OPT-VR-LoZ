@@ -64,7 +64,7 @@ function enterScene() {
         </section>
         <dt>
         <dt>
-          <i>Included assets</i>
+          <i>3D assets used</i>
         </dt>
         <dt>
           <a href="https://github.com/c-frame/aframe-extras" target="_blank">aframe-extras controls and
@@ -150,52 +150,73 @@ function enterScene() {
         </dd>
 
         <dt>
-          <i>Included songs</i>
+          <i>Audio assets used</i>
         </dt>
 
         <dt>
-          <a target="_blank">
-            The Legend of Zelda: Ocarina of Time - Ocarina notes</a>
+          <a href="https://www.youtube.com/watch?v=ov7nj5RArTs&ab_channel=VideoGamesMusic">Temple of Time Theme</a>
         </dt>
         <dd>
-          by <a target="_blank">Nintendo</a>
-          under <a target="_blank">All Right Reserved</a>
+          by <a href="https://www.youtube.com/@VideoGamesMusic_VGM">VideoGamesMusic</a>
+          from The Legend of Zelda: Ocarina of Time
         </dd>
 
         <dt>
-          <a target="_blank">
-            The Legend of Zelda: Ocarina of Time - Minuet of Forest</a>
+          <a href="https://www.youtube.com/watch?v=2Ko2-HaHLs0&ab_channel=VideoGamesMusic">Minuet of Forest</a>
         </dt>
         <dd>
-          by <a target="_blank">Nintendo</a>
-          under <a target="_blank">All Right Reserved</a>
+          by <a href="https://www.youtube.com/@VideoGamesMusic_VGM">VideoGamesMusic</a>
+          from The Legend of Zelda: Ocarina of Time
         </dd>
 
         <dt>
-          <a target="_blank">
-            The Legend of Zelda: Ocarina of Time - Bolero of Fire</a>
+          <a href="https://www.youtube.com/watch?v=zzxQZnj7sjU&ab_channel=VideoGamesMusic">Bolero of Fire</a>
         </dt>
         <dd>
-          by <a target="_blank">Nintendo</a>
-          under <a target="_blank">All Right Reserved</a>
+          by <a href="https://www.youtube.com/@VideoGamesMusic_VGM">VideoGamesMusic</a>
+          from The Legend of Zelda: Ocarina of Time
         </dd>
 
         <dt>
-          <a target="_blank">
-            The Legend of Zelda: Ocarina of Time - Serenade of Water</a>
+          <a href="https://www.youtube.com/watch?v=VprgK2FcadY&ab_channel=VideoGamesMusic">Serenade of Water</a>
         </dt>
         <dd>
-          by <a target="_blank">Nintendo</a>
-          under <a target="_blank">All Right Reserved</a>
+          by <a href="https://www.youtube.com/@VideoGamesMusic_VGM">VideoGamesMusic</a>
+          from The Legend of Zelda: Ocarina of Time
         </dd>
 
         <dt>
-          <a target="_blank">
-            The Legend of Zelda: Ocarina of Time - Error sound</a>
+          <a href="https://noproblo.dayjo.org/ZeldaSounds/OOT/#Instruments">Ocarina notes short (A, B, D, F, D2)</a>
         </dt>
         <dd>
-          by <a target="_blank">Nintendo</a>
-          under <a target="_blank">All Right Reserved</a>
+          by <a href="https://www.ZeldaSounds.com">HelpTheWretched</a>
+          from The Legend of Zelda: Ocarina of Time
+        </dd>
+
+        <dt>
+          <a href="https://noproblo.dayjo.org/ZeldaSounds/OOT/#Menus_etc">Correct song</a>
+        </dt>
+        <dd>
+          by <a href="https://www.ZeldaSounds.com">HelpTheWretched</a>
+          from The Legend of Zelda: Ocarina of Time
+        </dd>
+
+        <dt>
+          <a href="https://noproblo.dayjo.org/ZeldaSounds/OOT/#Weapons_and_Items">Fanfare Item</a>
+        </dt>
+        <dd>
+          by <a href="https://www.ZeldaSounds.com">HelpTheWretched</a>
+          from The Legend of Zelda: Ocarina of Time
+        </dd>
+
+        <dt>
+          <a href="https://opengameart.org/content/stone-door">
+            Stone Door sound
+          </a>
+        </dt>
+        <dd>
+          by <a href="https://opengameart.org/users/bonebrah">bonebrah</a>
+          under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC BY 1.0</a>
         </dd>
         </dt>
       </div>

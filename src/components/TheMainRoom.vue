@@ -77,10 +77,14 @@ document.querySelector('a-scene').addEventListener('zoraPlayed', () => {
 document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
   document.getElementById('mainDoor').setAttribute('animation', {
     property: 'position',
-    to: '0 10.76 9.691',
-    dur: 20000,
+    to: '0 5.5 9.691',
+    dur: 5000,
     easing: 'linear'
   });
+  document.getElementById('mainDoor').components.sound.playSound();
+  setTimeout(() => {
+    document.getElementById('mainDoor').components.sound.stopSound();
+  }, 5000);
 }
 );
 </script>
@@ -104,7 +108,9 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
     <a-entity id="zoraGem" gltf-model="#zora" position="-0.5 1.3 7.25" scale="0.1 0.1 0.1" rotation="0 180 0"
       visible="false"></a-entity>
 
-    <a-box id="mainDoor" color="grey" depth="0.2" height="3.5" width="1.8" position="0 1.980 9.742"></a-box>
+    <a-box id="mainDoor" color="grey" depth="0.2" height="3.5" width="1.8" position="0 1.980 9.742"
+      sound="src: #stoneDoorSound; loop:true; on:start-doorSound; volume:1"></a-box>
+
     <PortalTeleporter material="src: #room-physics-texture" depth="0.1" position="0 1.980 9.742" rotation="0 180 0"
       scale="1.75 3.13 0.1" :rot="0" :y="0" :z="-19" :cameraEffect="true" :cameraY="1.70" :cameraZ="-19" />
 
