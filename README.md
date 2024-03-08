@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="triforce.png" alt="TriforceLogo" align="center"/>
+    <img src="public/assets/triforce.png" alt="TriforceLogo" align="center"/>
 </p>
 <h1 align="center">The master sword trial - VR</h1>
 
@@ -52,17 +52,36 @@
 - [**Wind Waker | The Legend of Zelda: WW**](https://sketchfab.com/3d-models/wind-waker-the-legend-of-zelda-ww-685c477c40bb4fa991ce701d443f4ed9) \
   by [lumhax](https://sketchfab.com/lumhax") is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-  ### Audio
+### Audio
 
-- [**Countdown**](https://opengameart.org/content/countdown) \
-  by [qubodup](https://opengameart.org/users/qubodup) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) \
-  Modifications: Added the files together in the following order: countdown-a, countdown-a, countdown-b.
+- [**Temple of Time Theme**](https://www.youtube.com/watch?v=ov7nj5RArTs&ab_channel=VideoGamesMusic) \
+  by [VideoGamesMusic](https://www.youtube.com/@VideoGamesMusic_VGM) from The Legend of Zelda: Ocarina of Time
+
+- [**Minuet of Forest**](https://www.youtube.com/watch?v=2Ko2-HaHLs0&ab_channel=VideoGamesMusic) \
+  by [VideoGamesMusic](https://www.youtube.com/@VideoGamesMusic_VGM) from The Legend of Zelda: Ocarina of Time
+
+- [**Bolero of Fire**](https://www.youtube.com/watch?v=zzxQZnj7sjU&ab_channel=VideoGamesMusic) \
+  by [VideoGamesMusic](https://www.youtube.com/@VideoGamesMusic_VGM) from The Legend of Zelda: Ocarina of Time
+
+- [**Serenade of Water**](https://www.youtube.com/watch?v=VprgK2FcadY&ab_channel=VideoGamesMusic) \
+  by [VideoGamesMusic](https://www.youtube.com/@VideoGamesMusic_VGM) from The Legend of Zelda: Ocarina of Time
+
+- [**Ocarina notes short (A, B, D, F, D2)**](https://noproblo.dayjo.org/ZeldaSounds/OOT/#Instruments) \
+  by [HelpTheWretched](https://www.ZeldaSounds.com) from The Legend of Zelda: Ocarina of Time
+
+- [**Correct song**](https://noproblo.dayjo.org/ZeldaSounds/OOT/#Menus_etc) \
+  by [HelpTheWretched](https://www.ZeldaSounds.com) from The Legend of Zelda: Ocarina of Time
+
+- [**Fanfare Item**](https://noproblo.dayjo.org/ZeldaSounds/OOT/#Weapons_and_Items) \
+  by [HelpTheWretched](https://www.ZeldaSounds.com) from The Legend of Zelda: Ocarina of Time
+
+- [**Stone Door**](https://opengameart.org/content/stone-door) \
+  by [bonebrah](https://opengameart.org/users/bonebrah) is licensed under [CC BY 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ### Image
 
-- [**Les frères Mario**](https://www.favicon.cc/?action=icon&file_id=137640) \
-  by [marcojetson](https://www.favicon.cc/?action=icon_list&user_id=36881) is licensed under [CC 0](https://creativecommons.org/publicdomain/zero/1.0/) \
-  Modifications: Added a VR headset to Mario's head and two controllers.
+- [**Triforce**](https://icon-icons.com/icon/triforce/39449) \
+  by [Lorc, Delapouite & contributors](https://icon-icons.com/users/V0FlbpEtoH55fqnf9aoeQ/icon-sets/) is licensed under [CC BY 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ---
 
@@ -73,7 +92,7 @@
 ### Clone (or fork, or download)
 
 ```sh
-git clone https://github.com/PatrickMarques24/mario-kart-shooter-vr.git
+git clone https://github.com/quinteirosm/OPT-VR-LoZ.git
 ```
 
 ### Install dependencies
