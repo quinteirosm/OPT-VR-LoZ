@@ -92,8 +92,10 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
 <template>
   <a-entity id="mainRoom" gltf-model="#templeRoom" rotation="0 -180 0" position="0 0 -7">
 
-    <a-text id="wandText" value="It's dangerous to go alone! Take this." position="0 2 -4" rotation="0 180 0"
-      scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="16" side="double" visible="true">
+    <a-text id="wandText" value="It's dangerous to go alone! Take this."
+      geometry="primitive:plane; width:1.2; height:0.5" material="side:double;color:black" position="0 2 -4"
+      rotation="0 180 0" scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="16" side="double"
+      visible="true">
     </a-text>
     <a-entity>
       <a-entity id="wwWand" clickable @click="evt => grabTheThing(evt)" gltf-model="#wwWandItem"
@@ -164,9 +166,9 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
     </a-text>
   </a-entity>
   <ExitDoor />
-  <!-- Main room navigation mesh  -->
-  <!-- <a-entity geometry="primitive: plane; height: 12.5; width: 11.5" position="0 0 -5.9" rotation="-90 0 0"
+  Main room navigation mesh
+  <a-entity id="mainMesh" geometry="primitive: plane; height: 12.5; width: 11.5" position="0 0 -5.9" rotation="-90 0 0"
     data-role="nav-mesh" material="color: blue" visible="false"></a-entity>
-  <a-entity geometry="primitive: plane; height: 3.5; width: 4.5" position="0 0.4 -14.7" rotation="-90 0 0"
-    data-role="nav-mesh" material="color: blue" visible="false"></a-entity> -->
+  <a-entity id="altarMesh" geometry="primitive: plane; height: 3.5; width: 5" position="0 0.4 -14.7" rotation="-90 0 0"
+    data-role="nav-mesh" material="color: blue" visible="false"></a-entity>
 </template>
