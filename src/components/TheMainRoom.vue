@@ -114,7 +114,7 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
     <PortalTeleporter material="src: #room-physics-texture" depth="0.1" position="0 1.980 9.742" rotation="0 180 0"
       scale="1.75 3.13 0.1" :rot="0" :y="0" :z="-19" :cameraEffect="true" :cameraY="1.70" :cameraZ="-19" />
 
-    <a-text id="dekuSongPart" value="Minuet of Forest ↖️⬆️⬅️➡️⬅️➡️" position="2.996 2 -1.507" rotation="0 -90 0"
+    <a-text id="dekuSongPart" value="Minuet of Forest ↖️⬆️⬅️➡️⬅️➡️" position="2.996 2 -1.5" rotation="0 -90 0"
       scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="16" side="double">
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
         position="-0.25 -0.25 0"></a-entity>
@@ -129,7 +129,7 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
         position="0.25 -0.5 0"></a-entity>
     </a-text>
-    <a-text id="goronSongPart" value="Bolero of Fire ⬇️↖️⬇️↖️➡️⬇️➡️⬇️" position="2.996 2 1.551" rotation="0 -90 0"
+    <a-text id="goronSongPart" value="Bolero of Fire ⬇️↖️⬇️↖️➡️⬇️➡️⬇️" position="2.996 2 1.5" rotation="0 -90 0"
       scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="14" side="double">
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"
         position="-0.25 -0.25 0"></a-entity>
@@ -142,14 +142,14 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
         position="0 -0.5 0"></a-entity>
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"
-        position="0.2 -0.5 0"></a-entity>
+        position="0.25 -0.5 0"></a-entity>
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
-        position="-0.1 -0.75 0"></a-entity>
+        position="-0.125 -0.75 0"></a-entity>
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 0 -1 0"
-        position="0.1 -0.75 0"></a-entity>
+        position="0.125 -0.75 0"></a-entity>
     </a-text>
 
-    <a-text id="zoraSongPart" value="Serenade of Water ↖️⬇️➡️➡️⬅️" position="-2.999 2 -1.501" rotation="0 90 0"
+    <a-text id="zoraSongPart" value="Serenade of Water ↖️⬇️➡️➡️⬅️" position="-2.999 2 -1.5" rotation="0 90 0"
       scale="0.5 0.5 0.5" color="white" align="center" width="1" wrap-count="17" side="double">
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 1 0"
         position="-0.25 -0.25 0"></a-entity>
@@ -158,9 +158,9 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
         position="0.25 -0.25 0"></a-entity>
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: 1 0 0"
-        position="-0.25 -0.5 0"></a-entity>
+        position="-0.125 -0.5 0"></a-entity>
       <a-entity arrow="length:0.1; headLength:0.05; headWidth:0.15; color: white; direction: -1 0 0"
-        position="0 -0.5 0"></a-entity>
+        position="0.125 -0.5 0"></a-entity>
     </a-text>
   </a-entity>
   <ExitDoor />
