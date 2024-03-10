@@ -69,8 +69,7 @@ window.addEventListener('click', (evt) => {
         </a-entity>
     </a-entity>
     <ExitDoor />
-
-    Main room navigation mesh
+    <!-- Main room navigation mesh -->
     <a-entity id="swordMesh" geometry="primitive: plane; height: 12; width: 12" position="0 0.2 -25" rotation="-90 0 0"
         data-role="nav-mesh" material="color: blue" visible="false"></a-entity>
     <a-entity id="swordAltarMesh" geometry="primitive: plane; height: 2; width: 2" position="0 0.5 -25"

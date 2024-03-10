@@ -166,7 +166,7 @@ document.querySelector('a-scene').addEventListener('allSongsPlayed', () => {
     </a-text>
   </a-entity>
   <ExitDoor />
-  Main room navigation mesh
+  <!-- Main room navigation mesh -->
   <a-entity id="mainMesh" geometry="primitive: plane; height: 12.5; width: 11.5" position="0 0 -5.9" rotation="-90 0 0"
     data-role="nav-mesh" material="color: blue" visible="false"></a-entity>
   <a-entity id="altarMesh" geometry="primitive: plane; height: 3.5; width: 5" position="0 0.4 -14.7" rotation="-90 0 0"
